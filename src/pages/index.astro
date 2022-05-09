@@ -1,174 +1,194 @@
 ---
-import Layout from '../components/Layout.astro';
+import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
+let pageTitle = "Logan Murray - Frontend Developer";
+let pageDescription = "Logan Murray is a frontend developer based in Chicago, IL. He has a passion for creating beautiful and intuitive user experiences.";
 ---
 
-<Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
-		<p class="instructions"><strong>Your first mission:</strong> tweak this message to try our hot module reloading. Check the <code>src/pages</code> directory!</p>
-		<ul role="list" class="link-card-grid">
-			<li class="link-card">
-				<a href="https://astro.build/integrations/">
-					<h2>Integrations <span>&rarr;</span></h2>
-					<p>Add component frameworks, Tailwind, Partytown, and more!</p>
+<MainLayout title={pageTitle} description={pageDescription}>
+<div class="main_content index">
+	<!-- START HERO SECTION -->
+	<section class="hero bg-dark w100 flex flex_wrap flex_center-all">
+		<div
+			data-aos="fade-right"
+			data-aos-duration="1000"
+			class="flex_col col_50-100 flex_center stack-bottom hero-left"
+		>
+			<div class="w100">
+				<h1 class="txt-xlarge my_name">Logan Murray</h1>
+				<h2 class="txt-large">Frontend Developer</h2>
+			</div>
+
+			<p class="top_bottom-p1 txt-medium hero-text">
+				DePaul University - March 2020<br />
+				<i>BS in Computer Science - Software Development</i
+				><br />
+				My commencement is a 3 hour YouTube video that I watched
+				in my pajamas at home. Shortly after graduation my
+				interests shifted to the world of web development and I
+				have been picking up and learning new skills everyday.
+				My main goal is to eventually become a reliable and
+				capable fullstack web developer.
+			</p>
+			<div class="w100">
+				<a href="/about-me">
+					<button class="cta">Learn More About Me</button>
 				</a>
-			</li>
-			<li class="link-card">
-				<a href="https://astro.build/themes/">
-					<h2>Themes <span>&rarr;</span></h2>
-					<p>Explore a galaxy of community-built starters.</p>
-				</a>
-			</li>
-			<li class="link-card">
-				<a href="https://docs.astro.build/">
-					<h2>Docs <span>&rarr;</span></h2>
-					<p>Learn our complete feature set and explore the API.</p>
-				</a>
-			</li>
-			<li class="link-card">
-				<a href="https://astro.build/chat/">
-					<h2>Chat <span>&rarr;</span></h2>
+			</div>
+		</div>
+		<div
+			data-aos="fade-left"
+			data-aos-duration="1000"
+			class="flex_col col_50-100 flex_center txt-center stack-top"
+		>
+			<img
+				src="assets/prof_blacksuit_bg_square-removebg-preview.png"
+				data-tilt
+				alt="Picture of Me, Logan"
+				class="prof_pic fancy-border bg-gradient img-circle"
+			/>
+		</div>
+	</section>
+	<!-- END OF HERO SECTION -->
+
+	<!-- START OF CARDS/SKILL SECTION -->
+	<section class="bg-light">
+		<h1 class="section_header">Skills & Languages</h1>
+		<h3 class="section_caption">
+			I am constantly working on my development skills. I like to
+			learn something new everyday. Here is a quick breakdown of
+			the things I know.
+		</h3>
+		<!-- ROW -->
+		<div class="flex flex_wrap flex_center flex_stretch-y">
+			<div
+				data-aos="fade-up-right"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img
+						src="assets/html-css-js.png"
+						alt="HTML/CSS/JS"
+					/>
+					<h2>HTML/CSS/JS</h2>
+				</div>
+				<div class="card_bottom">
 					<p>
-						Ask, contribute, and have fun on our community Discord
-						<svg
-							class="heart"
-							xmlns="http://www.w3.org/2000/svg"
-							viewBox="0 0 512 512"
-							width="16"
-							height="16"
-							fill="currentColor"
-						>
-							<title>heart</title>
-							<path d="M256 448l-30.164-27.211C118.718 322.442 48 258.61 48 179.095 48 114.221 97.918 64 162.4 64c36.399 0 70.717 16.742 93.6 43.947C278.882 80.742 313.199 64 349.6 64 414.082 64 464 114.221 464 179.095c0 79.516-70.719 143.348-177.836 241.694L256 448z" />
-						</svg>
+						In my current role as a FED at HS1 I have learned a
+						significant amount of HTML/CSS/JS on top of my basic
+						knowledge I had acquired through school and in
+						personal projects.
 					</p>
-				</a>
-			</li>
-		</ul>
-	</main>
-</Layout>
-
-<style>
-	:root {
-		--color-border: hsl(17, 24%, 90%);
-		--astro-gradient: linear-gradient(0deg,#4F39FA, #DA62C4);
-		--link-gradient: linear-gradient(45deg, #4F39FA, #DA62C4 30%, var(--color-border) 60%);
-		--night-sky-gradient: linear-gradient(0deg, #392362 -33%, #431f69 10%, #30216b 50%, #1f1638 100%);
-	}
-
-	h2 {
-		margin: 0;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	h2 span {
-		display: inline-block;
-		transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	main {
-		margin: auto;
-    padding: 1em;
-		max-width: 60ch;
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-  	-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%, 100% {
-			background-position-y: 0%;
-		}
-		50% {
-			background-position-y: 80%;
-		}
-	}
-
-	.instructions {
-		line-height: 1.8;
-		margin-bottom: 2rem;
-		background-image: var(--night-sky-gradient);
-		padding: 1.5rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.15rem;
-		background-image: var(--link-gradient);
-		background-size: 400%;
-		border-radius: 0.5rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1em 1.3em;
-		border-radius: 0.35rem;
-		color: var(--text-color);
-		background-color: white;
-		opacity: 0.8;
-	}
-
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-	}
-
-	.link-card:is(:hover, :focus-within) h2 {
-		color: #4F39FA;
-	}
-
-	.link-card:is(:hover, :focus-within) h2 span {
-		transform: translateX(2px);
-	}
-
-	.heart {
-		display: inline-block;
-		color: #DA62C4;
-		animation: heartbeat 3s ease-in-out infinite;
-	}
-
-	@keyframes heartbeat {
-		0%,
-		50%,
-		100% {
-			transform: scale(1);
-		}
-		5% {
-			transform: scale(1.125);
-		}
-		10% {
-			transform: scale(1.05);
-		}
-		15% {
-			transform: scale(1.25);
-		}
-	}
-</style>
+					<a class="off-white" href="/projects"> View Projects</a>
+				</div>
+			</div>
+			<div
+				data-aos="fade-up-left"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img src="assets/reactjs.png" alt="React" />
+					<h2>React</h2>
+				</div>
+				<div class="card_bottom">
+					<p>
+						React and React.js have been increasingly popular
+						and I was told if you want to make it in the FED or
+						web development world you have to learn a framework
+						(even though React is a library).
+					</p>
+					<a class="off-white" href="/projects"> View Projects</a>
+				</div>
+			</div>
+		</div>
+		<!-- ROW -->
+		<div class="flex flex_center flex_wrap flex_stretch-y">
+			<div
+				data-aos="fade-up-right"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img src="assets/java.png" alt="Java" />
+					<h2>Java</h2>
+				</div>
+				<div class="card_bottom">
+					<p>
+						Most of my classes at DePaul were taught in Java.
+						Data Structures and OOP were primarily taught in
+						Java while my systems classes were all C/C++. I do
+						not enjoy C/C++ as much as I enjoy Java.
+					</p>
+					<a class="off-white" href="/projects"> View Projects</a>
+				</div>
+			</div>
+			<div
+				data-aos="fade-up-left"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img src="assets/python.png" alt="Python" />
+					<h2>Python</h2>
+				</div>
+				<div class="card_bottom">
+					<p>
+						Python is one of those hate to love programming
+						languages for me. It is so simple and relaxed with
+						its syntax that sometimes I forget I am programming
+						at all. But it is very useful and has a Swiss Army
+						Knife of usability.
+					</p>
+					<a class="off-white" href="/projects"> View Projects</a>
+				</div>
+			</div>
+		</div>
+		<!-- ROW -->
+		<div class="flex flex_center flex_wrap flex_stretch-y">
+			<div
+				data-aos="fade-up-right"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img src="assets/mysql.png" alt="SQL" />
+					<h2>SQL</h2>
+				</div>
+				<div class="card_bottom">
+					<p>
+						Database Management was a fun and challenging course
+						for me at DePaul. And although we used Oracle PL/SQL
+						throughout the course I have found that it's good
+						practice to get familiar with opensource tools like
+						MySQL.
+						
+					</p>
+					<a class="off-white" href="/projects"> View Projects</a>
+				</div>
+			</div>
+			<div
+				data-aos="fade-up-left"
+				data-aos-duration="600"
+				class="card flex flex_col"
+			>
+				<div class="card_top">
+					<img src="assets/wordpress.png" alt="WordPress" />
+					<h2>WordPress</h2>
+				</div>
+				<div class="card_bottom">
+					<p>
+						WordPress is very fun to experiment with and in my
+						CMS class we learned a lot of just how capable
+						WordPress is as a web building platform. We even
+						learned some PHP and made our own plugins.
+					</p>
+					<a class="off-white" href="/projects">View Projects</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	</div>
+	<!-- END OF CARDS SECTION -->
+</MainLayout>

@@ -1,0 +1,81 @@
+---
+import HeaderSection from "../components/HeaderSection.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+let title = Astro.props.title;
+let description = Astro.props.description;
+---
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sora&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.2.0/css/glide.core.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+        <link rel="stylesheet" href="../styles/global.css"/>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <title>{title}</title>
+        <meta name="description" content={description} />
+    </head>
+    <body>
+    <HeaderSection />
+        <slot />
+        <script>
+            // Menu on mobile and tablet
+            const openMenu = document.querySelector(".open__nav");
+            const closeMenu = document.querySelector(".close__nav");
+            const menu = document.querySelector(".cover");
+            const outsideNav = document.querySelector(".cover__overlay");
+
+            const toggleNav = (menu) => {
+                if (menu.classList.contains("off_canvas-x")) {
+                    menu.classList.remove("off_canvas-x");
+                } else {
+                    menu.classList.add("off_canvas-x");
+                }
+            };
+
+            openMenu.addEventListener("click", (e) => {
+                toggleNav(menu);
+            });
+
+            closeMenu.addEventListener("click", (e) => {
+                toggleNav(menu);
+            });
+
+            outsideNav.addEventListener("click", (e) => {
+                toggleNav(menu);
+            });
+             $(function () {
+                $(".social_icons div").hover(function () {
+                    $(this).children(".hidden-text").slideToggle();
+                });
+            });
+            // Slideshow - Glide.js
+            new Glide(".glide", {
+                type: "carousel",
+                startAt: 0,
+                perView: 3,
+                focusAt: "center",
+                autoplay: 3000,
+                gap: 20,
+                hoverpause: true,
+                animationDuration: 800,
+                breakpoints: {
+                    1024: {
+                        perView: 2,
+                    },
+                    800: {
+                        perView: 1,
+                    },
+                },
+            }).mount();
+        </script>
+    </body>
+    <Footer />
+</html>
