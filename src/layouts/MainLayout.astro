@@ -4,8 +4,7 @@ import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 let title = Astro.props.title;
 let description = Astro.props.description;
-let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty("--vh", `${vh}px`);
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -60,6 +59,9 @@ document.documentElement.style.setProperty("--vh", `${vh}px`);
                     $(this).children(".hidden-text").slideToggle();
                 });
             });
+            // Height fix
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty("--vh", `${vh}px`);
             // Slideshow - Glide.js
             new Glide(".glide", {
                 type: "carousel",
