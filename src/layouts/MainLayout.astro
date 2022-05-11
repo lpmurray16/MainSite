@@ -32,25 +32,6 @@ let description = Astro.props.description;
             // Height fix
             let vh = window.innerHeight * 0.01;
             document.documentElement.style.setProperty("--vh", `${vh}px`);
-            // Slideshow - Glide.js
-            new Glide(".glide", {
-                type: "carousel",
-                startAt: 0,
-                perView: 3,
-                focusAt: "center",
-                autoplay: 3000,
-                gap: 20,
-                hoverpause: true,
-                animationDuration: 800,
-                breakpoints: {
-                    1024: {
-                        perView: 2,
-                    },
-                    800: {
-                        perView: 1,
-                    },
-                },
-            }).mount();
         </script>
     </body>
     <Footer />

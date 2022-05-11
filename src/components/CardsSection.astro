@@ -2,15 +2,10 @@
 
 ---
 <!-- START OF CARDS/SKILL SECTION -->
-	<section class="bg-light bg-crosses">
-		
+	<section class="bg-light bg-crosses moreCards">	
 		<!-- ROW -->
-		<div class="flex flex_wrap flex_center flex_stretch-y">
-			<div
-				data-aos="fade-up-right"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+		<div class="flex flex_wrap flex_center flex_stretch-y cards">
+			<div class="card flex flex_col cardLeft">
 				<div class="card_top">
 					<img
 						src="assets/html-css-js.png"
@@ -28,11 +23,7 @@
 					<a href="/projects"><button class="cta w100">View Projects</button></a>
 				</div>
 			</div>
-			<div
-				data-aos="fade-up-left"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+			<div class="card flex flex_col cardRight">
 				<div class="card_top">
 					<img src="assets/reactjs.png" alt="React" />
 					<h2>React</h2>
@@ -50,11 +41,7 @@
 		</div>
 		<!-- ROW -->
 		<div class="flex flex_center flex_wrap flex_stretch-y">
-			<div
-				data-aos="fade-up-right"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+			<div class="card flex flex_col cardLeft">
 				<div class="card_top">
 					<img src="assets/java.png" alt="Java" />
 					<h2>Java</h2>
@@ -69,11 +56,7 @@
 					<a href="/projects"><button class="cta w100">View Projects</button></a>
 				</div>
 			</div>
-			<div
-				data-aos="fade-up-left"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+			<div class="card flex flex_col cardRight">
 				<div class="card_top">
 					<img src="assets/python.png" alt="Python" />
 					<h2>Python</h2>
@@ -92,11 +75,7 @@
 		</div>
 		<!-- ROW -->
 		<div class="flex flex_center flex_wrap flex_stretch-y">
-			<div
-				data-aos="fade-up-right"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+			<div class="card flex flex_col cardLeft">
 				<div class="card_top">
 					<img src="assets/mysql.png" alt="SQL" />
 					<h2>SQL</h2>
@@ -113,11 +92,7 @@
 					<a href="/projects"><button class="cta w100">View Projects</button></a>
 				</div>
 			</div>
-			<div
-				data-aos="fade-up-left"
-				data-aos-duration="600"
-				class="card flex flex_col"
-			>
+			<div class="card flex flex_col cardRight">
 				<div class="card_top">
 					<img src="assets/wordpress.png" alt="WordPress" />
 					<h2>WordPress</h2>
@@ -134,3 +109,25 @@
 			</div>
 		</div>
 	</section>
+	<script>
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting && entry.target.classList.contains("cardLeft")) {
+					entry.target.classList.add("fadeUpInLeft");
+				} else {
+					entry.target.classList.remove("fadeUpInLeft");
+				}
+			});
+		});
+		observer.observe(document.querySelector('.moreCards'));
+		const observer2 = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting && entry.target.classList.contains("cardRight")) {
+					entry.target.classList.add("fadeUpInRight");
+				} else {
+					entry.target.classList.remove("fadeUpInRight");
+				}
+			});
+		});
+		observer2.observe(document.querySelector('.cards'));
+	</script>

@@ -64,7 +64,7 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                                     src="https://i.ibb.co/gM1zh9w/bodie1.jpg"
                                     alt="Bodie"
                                 />
-                                <figcaption>Bodie</figcaption>
+                            
                             </figure>
                         </li>
                         <li class="glide__slide">
@@ -73,7 +73,7 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                                     src="https://i.ibb.co/kg1dbqD/quill1.jpg"
                                     alt="Quill"
                                 />
-                                <figcaption>Quill</figcaption>
+                                
                             </figure>
                         </li>
                         <li class="glide__slide">
@@ -82,7 +82,7 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                                     src="https://i.ibb.co/zx5BG4m/IMG-6561.jpg"
                                     alt="My Wife and I"
                                 />
-                                <figcaption>My Wife and I</figcaption>
+                                
                             </figure>
                         </li>
                         <li class="glide__slide">
@@ -91,7 +91,7 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                                     src="https://i.ibb.co/MDWHkN3/both1.jpg"
                                     alt="Quill and Bodie"
                                 />
-                                <figcaption>Quill and Bodie</figcaption>
+                                
                             </figure>
                         </li>
                         <li class="glide__slide">
@@ -100,7 +100,7 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                                     src="https://i.ibb.co/93w9bS6/both3.jpg"
                                     alt="Quill and Bodie"
                                 />
-                                <figcaption>Quill and Bodie</figcaption>
+                                
                             </figure>
                         </li>
                     </ul>
@@ -126,4 +126,25 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
         </section>
     </div>
     <!-- END OF SLIDESHOW -->
+    <script>
+        // Slideshow - Glide.js
+        new Glide(".glide", {
+            type: "carousel",
+            startAt: 0,
+            perView: 3,
+            focusAt: "center",
+            autoplay: 3000,
+            gap: 20,
+            hoverpause: true,
+            animationDuration: 800,
+            breakpoints: {
+                1024: {
+                    perView: 2,
+                },
+                800: {
+                    perView: 1,
+                },
+            },
+        }).mount();
+    </script>
 </MainLayout>
