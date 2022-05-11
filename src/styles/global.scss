@@ -35,6 +35,18 @@
 /////// END OF SCROLLBAR //////////////
 
 /////////////////// UTIL CLASSES ///////////////
+.mobile-only {
+    display: none;
+    @media screen and (max-width: 450px) {
+        display: block;
+    }
+}
+.not-mobile {
+    display: block;
+    @media screen and (max-width: 450px) {
+        display: none;
+    }
+}
 .off-white {
     color: $headline !important;
 }
@@ -82,12 +94,21 @@
 .txt-medium {
     font-size: 1.2rem;
     line-height: 1.8;
+    @media screen and (max-width: 450px) {
+        font-size: 14px;
+    }
 }
 .txt-large {
     font-size: 2.4rem;
+    @media screen and (max-width: 450px) {
+        font-size: 1.456rem;
+    }
 }
 .txt-xlarge {
     font-size: 3.5rem;
+    @media screen and (max-width: 450px) {
+        font-size: 1.978rem;
+    }
 }
 .col {
     &_50-100 {
@@ -208,6 +229,10 @@ a {
     &:focus {
         box-shadow: inset 0 -3.75em 0 0 $extra;
     }
+    @media screen and (max-width: 450px) {
+        font-size: 1rem;
+        padding: 1rem 1rem;
+    }
 }
 
 // images
@@ -276,6 +301,10 @@ body {
     margin-top: 1em;
     position: absolute;
     top: 0;
+    @media screen and (max-width: 450px) {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     .desktop-nav {
         display: flex;
         align-items: center;
@@ -716,6 +745,9 @@ figure figcaption {
     .stack-top {
         order: 1;
         padding-top: 3.5em;
+        @media screen and (max-width: 450px) {
+            padding-top: 0.5em;
+        }
     }
     .stack-bottom {
         padding-top: 3em;
@@ -729,6 +761,9 @@ figure figcaption {
     background: $orange;
     background: linear-gradient(155deg, $orange 16%, $peachy 53%, $extra 92%);
     transition: background 800ms ease;
+    @media screen and (max-width: 450px) {
+        max-width: 200px;
+    }
 }
 .prof_pic:hover {
     background: $orange;
@@ -812,16 +847,14 @@ figure figcaption {
         max-width: 40ch;
         margin: 0 auto 2em;
     }
-    .hero img {
-        max-width: 90%;
-    }
+
     .top_bottom-p1 {
         padding: 2em 0;
     }
     .icon {
         width: 90px;
         height: auto;
-        margin: 30px 0 0 26px;
+        margin: 20px 0 0 20px;
     }
     .menu__container {
         position: fixed;
