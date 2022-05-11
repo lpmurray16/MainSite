@@ -819,6 +819,11 @@ figure figcaption {
     order: 2;
   }
 }
+@media screen and (max-width: 1199.98px) and (max-width: 450px) {
+  .stack-bottom {
+    padding-top: 0em;
+  }
+}
 @media (max-width: 1199.98px) {
   .stack-bottom2 {
     order: 3;

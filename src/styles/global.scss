@@ -776,6 +776,9 @@ figure figcaption {
     .stack-bottom {
         padding-top: 3em;
         order: 2;
+        @media screen and (max-width: 450px) {
+            padding-top: 0em;
+        }
     }
     .stack-bottom2 {
         order: 3;
