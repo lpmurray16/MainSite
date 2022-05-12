@@ -717,6 +717,23 @@ figure figcaption {
 .fadeUpInLeft {
     animation: fadeUpInLeft 1s both;
 }
+.gradientWave {
+    animation: gradientWave 1s ease infinite;
+    background: $orange;
+    background: linear-gradient(-45deg, $orange, $peachy, $extra);
+    background-size: 400% 400%;
+}
+@keyframes gradientWave {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
 @keyframes fadeUpInLeft {
     0% {
         opacity: 0;
@@ -785,16 +802,9 @@ figure figcaption {
     }
 }
 .prof_pic {
-    background: $orange;
-    background: linear-gradient(155deg, $orange 16%, $peachy 53%, $extra 92%);
-    transition: background 800ms ease;
     @media screen and (max-width: 450px) {
         max-width: 200px;
     }
-}
-.prof_pic:hover {
-    background: $orange;
-    background: linear-gradient(155deg, $extra 16%, $peachy 53%, $orange 92%);
 }
 // LARGE screens
 @media (min-width: 1440px) {

@@ -735,6 +735,37 @@ figure figcaption {
           animation: fadeUpInLeft 1s both;
 }
 
+.gradientWave {
+  -webkit-animation: gradientWave 15s ease infinite;
+          animation: gradientWave 15s ease infinite;
+  background: #ff8906;
+  background: linear-gradient(-45deg, #ff8906, #f25f4c, #e53170);
+  background-size: 400% 400%;
+}
+
+@-webkit-keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientWave {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 @-webkit-keyframes fadeUpInLeft {
   0% {
     opacity: 0;
@@ -745,7 +776,6 @@ figure figcaption {
     transform: translateY(0) translateX(0);
   }
 }
-
 @keyframes fadeUpInLeft {
   0% {
     opacity: 0;
@@ -829,20 +859,10 @@ figure figcaption {
     order: 3;
   }
 }
-.prof_pic {
-  background: #ff8906;
-  background: linear-gradient(155deg, #ff8906 16%, #f25f4c 53%, #e53170 92%);
-  transition: background 800ms ease;
-}
 @media screen and (max-width: 450px) {
   .prof_pic {
     max-width: 200px;
   }
-}
-
-.prof_pic:hover {
-  background: #ff8906;
-  background: linear-gradient(155deg, #e53170 16%, #f25f4c 53%, #ff8906 92%);
 }
 
 @media (min-width: 1440px) {
