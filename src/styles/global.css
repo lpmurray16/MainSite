@@ -738,11 +738,11 @@ figure figcaption {
 }
 
 .gradientWave {
-  -webkit-animation: gradientWave 1s ease infinite;
-          animation: gradientWave 1s ease infinite;
+  -webkit-animation: gradientWave 4s ease infinite;
+          animation: gradientWave 4s ease infinite;
   background: #ff8906;
   background: linear-gradient(-45deg, #ff8906, #f25f4c, #e53170);
-  background-size: 400% 400%;
+  background-size: 300% 300%;
 }
 
 @-webkit-keyframes gradientWave {

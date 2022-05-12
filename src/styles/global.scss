@@ -720,10 +720,10 @@ figure figcaption {
     animation: fadeUpInLeft 1s both;
 }
 .gradientWave {
-    animation: gradientWave 1s ease infinite;
+    animation: gradientWave 4s ease infinite;
     background: $orange;
     background: linear-gradient(-45deg, $orange, $peachy, $extra);
-    background-size: 400% 400%;
+    background-size: 300% 300%;
 }
 @keyframes gradientWave {
     0% {
