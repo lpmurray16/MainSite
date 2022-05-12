@@ -139,7 +139,8 @@
 }
 
 .hero {
-  height: 70vh;
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   padding-top: 5.45em;
 }
 .hero .hero-text {
@@ -824,10 +825,6 @@ figure figcaption {
   .menu__container {
     display: flex;
     padding: 0 3vw;
-  }
-
-  .hero {
-    height: auto;
   }
 
   .col_50-100 {
