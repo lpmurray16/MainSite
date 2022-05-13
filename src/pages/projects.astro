@@ -1,56 +1,77 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 let pageTitle = "My Project - Logan Murray, Frontend Developer";
 let pageDescription = "View my projects and resume.";
+
 ---
 <MainLayout title={pageTitle} description={pageDescription}>
-<div class="main_content projects">
-    <!-- START HERO SECTION -->
-    <section class="hero bg-dark w100 flex flex_wrap flex_center-all">
-        <div
-            data-aos="fade-right"
-            data-aos-duration="1000"
-            class="flex_col col_50-100 flex_center stack-bottom hero-left"
-        >
-            <div class="w100">
-                <h1 class="txt-xlarge fancy_text">Projects</h1>
-            </div>
+    <div class="main_content projects">
+        <!-- START HERO SECTION -->
+        <section class="hero bg-dark w100 flex flex_wrap flex_center-all">
+            <div
+                data-aos="fade-right"
+                data-aos-duration="1000"
+                class="flex_col col_50-100 flex_center stack-bottom hero-left"
+            >
+                <div class="w100">
+                    <h1 class="txt-xlarge fancy_text">Projects</h1>
+                </div>
 
-            <p class="top_bottom-p1 txt-medium hero-text">
-                I will post my projects here directly when I get the chance. But
-                check out my
-                <a
-                    href="https://github.com/lpmurray16"
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    >GitHub!</a
-                >
-            </p>
-            <div class="w100">
-                <a href="/about-me">
-                    <button class="cta">Learn More About Me</button>
-                </a>
+                <p class="top_bottom-p1 txt-medium hero-text">
+                    I will post my projects here directly when I get the chance. But
+                    check out my
+                    <a
+                        href="https://github.com/lpmurray16"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        >GitHub!</a
+                    >
+                </p>
+                <div class="w100">
+                    <a href="/about-me">
+                        <button class="cta">Learn More About Me</button>
+                    </a>
+                </div>
             </div>
-        </div>
-        <div
-            data-aos="fade-left"
-            data-aos-duration="1000"
-            class="flex_col col_50-100 flex_center txt-center stack-top"
-        >
-            <img
-                src="../assets/guy_at_desk.svg"
-                data-tilt
-                alt="guy sitting at desk"
-                class="loop_pic fancy-border"
-            />
-        </div>
-    </section>
-    <!-- END OF HERO SECTION -->
+            <div
+                data-aos="fade-left"
+                data-aos-duration="1000"
+                class="flex_col col_50-100 flex_center txt-center stack-top"
+            >
+                <img
+                    src="../assets/guy_at_desk.svg"
+                    data-tilt
+                    alt="guy sitting at desk"
+                    class="loop_pic fancy-border"
+                />
+            </div>
+        </section>
+        <!-- END OF HERO SECTION -->
 
-    <!-- START OF CARDS/SKILL SECTION -->
-    <section class="bg-light">
-        <h1 class="section_header">Coming Soon!</h1>
-    </section>
-</div>
-<!-- END OF SECTION -->
+        <!-- START OF CARDS/SKILL SECTION -->
+        <section class="bg-light">
+            <h1 class="section_header">Completed and Ongoing Projects</h1>
+            <h3 class="section_caption">I try my best to update this, but time makes fools of us all.</h3>
+
+
+            <div id="react-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
+                <h3 class="language_header w100 fb100">React Projects</h3>
+                <ProjectCard anchor="react-img-search" 
+                    projectName="React Image Search" 
+                    shortDesc="A simple image search webapp written in ReactJS utilizing the Unsplash API." 
+                    projectLink="https://pics-unsplash.vercel.app/" 
+                    projectImg="/assets/img_search.png" 
+                />
+                <ProjectCard anchor="react-video-search" 
+                    projectName="React Video Search" 
+                    shortDesc="A simple video search webapp written in ReactJS utilizing the YouTube API." 
+                    projectLink="https://yt-video-clone.vercel.app/" 
+                    projectImg="/assets/video_search.png" 
+                />
+            </div>
+            
+        </section>
+    </div>
+    <!-- END OF SECTION -->
 </MainLayout>

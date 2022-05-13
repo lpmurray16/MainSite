@@ -208,6 +208,13 @@
 .flex_evenly {
   justify-content: space-evenly;
 }
+.flex_gap-small {
+  gap: 2%;
+}
+
+.fb100 {
+  flex-basis: 100%;
+}
 
 .off_canvas-x {
   transform: translateX(100%);
@@ -528,6 +535,15 @@ body {
   margin: 0 auto 3em;
 }
 
+.language_header {
+  font-size: 1.9em;
+  line-height: 1.8;
+  text-align: center;
+  max-width: 100%;
+  margin: 0 auto 0.5em;
+  padding-top: 1vw;
+}
+
 .card {
   background: #0f0e17;
   border-radius: 4px;
@@ -843,7 +859,7 @@ figure figcaption {
 }
 @media (max-width: 1199.98px) {
   .stack-bottom {
-    padding-top: 3em;
+    padding-top: 2em;
     order: 2;
   }
 }
