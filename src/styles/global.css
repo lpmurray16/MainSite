@@ -239,6 +239,14 @@ a:hover {
           text-decoration: underline #e53170;
 }
 
+.download_icon::before {
+  content: url("/assets/download_icon.png");
+  width: 18px;
+  height: 18px;
+  margin: 0 8px 0 0;
+  display: inline-flex;
+}
+
 .cta {
   color: #fffffe;
   background: #ff8906;
@@ -253,6 +261,32 @@ a:hover {
 }
 .cta:hover, .cta:focus {
   box-shadow: inset 0 -3.75em 0 0 #e53170;
+}
+.cta--secondary {
+  background: #f25f4c;
+  background: linear-gradient(155deg, #e53170 16%, #f25f4c 53%, #ff8906 92%);
+}
+.cta--secondary:hover, .cta--secondary:focus {
+  box-shadow: inset 0 -3.75em 0 0 #e53170;
+}
+.cta--resume {
+  margin-left: 1%;
+}
+@media screen and (max-width: 450px) {
+  .cta--resume {
+    margin-top: 1%;
+    margin-left: 0;
+  }
+}
+.cta--link {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: inline-flex;
+  text-decoration: none;
+}
+.cta--link:hover, .cta--link:focus {
+  text-decoration: none;
 }
 @media screen and (max-width: 450px) {
   .cta {

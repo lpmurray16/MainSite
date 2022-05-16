@@ -54,7 +54,21 @@ let pageDescription = "View my projects and resume.";
             <h1 class="section_header">Completed and Ongoing Projects</h1>
             <h3 class="section_caption">I try my best to update this, but time makes fools of us all.</h3>
 
-
+            <div id="basic-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
+                <h3 class="language_header w100 fb100">HTML/CSS/JS Projects</h3>
+                <ProjectCard anchor="astro-site"
+                    projectName="Astro Auto Parts"
+                    shortDesc="For an interview I refactored a landing page to showcase my UI/UX and development skills."
+                    projectLink="https://astro-auto-parts.vercel.app/"
+                    projectImg="/assets/car-wheel.png"
+                />
+                <ProjectCard anchor="drums-site"
+                    projectName="Drum Kit JS"
+                    shortDesc="Practice with JavaScript and the DOM to create a drum kit."
+                    projectLink="https://drumkit-1.vercel.app/"
+                    projectImg="/assets/drum.png"
+                />
+            </div>
             <div id="react-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
                 <h3 class="language_header w100 fb100">React Projects</h3>
                 <ProjectCard anchor="react-img-search" 
@@ -68,6 +82,12 @@ let pageDescription = "View my projects and resume.";
                     shortDesc="A simple video search webapp written in ReactJS utilizing the YouTube API." 
                     projectLink="https://yt-video-clone.vercel.app/" 
                     projectImg="/assets/video_search.png" 
+                />
+                <ProjectCard anchor="react-widgets" 
+                    projectName="React Widgets" 
+                    shortDesc="A small collection of ReactJS widgets. Uses Wikipedia API and Google Translate API." 
+                    projectLink="https://widgets-simple.vercel.app/" 
+                    projectImg="/assets/settings.png" 
                 />
             </div>
             
