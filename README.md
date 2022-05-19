@@ -1,32 +1,16 @@
 # Logan Murray - Frontend Developer
 
+### Visit [logan-murray.dev](https://logan-murray.dev) to see this portfolio in action
+
 ## Striving to become a Fullstack Web Developer
 
-# Welcome to [Astro](https://astro.build)
+### Built Using Astro (a really cool SSR framework, check it out below)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/starter)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+# Link to [Astro](https://astro.build)
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components or layouts.
+There's nothing special about `src/components/`, but that's where you can put any Astro/React/Vue/Svelte/Preact components or layouts.
 
 Any static assets, like images, can be placed in the `public/` directory.
 
