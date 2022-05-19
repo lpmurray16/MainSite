@@ -1,0 +1,10 @@
+[[redirects]]
+from = "https://lmurray.info/*"
+to = "https://www.logan-murray.dev/:splat"
+status = 301
+force = true
+[[redirects]]
+from = "https://www.lmurray.info/*"
+to = "https://www.logan-murray.dev/:splat"
+status = 301
+force = true
