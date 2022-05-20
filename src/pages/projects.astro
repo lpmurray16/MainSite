@@ -1,19 +1,17 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-import ProjectCard from "../components/ProjectCard.astro";
-let pageTitle = "My Project - Logan Murray, Frontend Developer";
-let pageDescription = "View my projects and resume.";
+    import MainLayout from "../layouts/MainLayout.astro";
+    import ProjectCard from "../components/ProjectCard.astro";
+    let pageTitle = "My Project - Logan Murray, Frontend Developer";
+    let pageDescription = "View my projects and resume.";
 
 ---
+
 <MainLayout title={pageTitle} description={pageDescription}>
     <div class="main_content projects">
         <!-- START HERO SECTION -->
         <section class="hero bg-dark w100 flex flex_wrap flex_center-all">
-            <div
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center stack-bottom hero-left"
-            >
+            <div data-aos="fade-right" data-aos-duration="1000"
+                class="flex_col col_50-100 flex_center stack-bottom hero-left">
                 <div class="w100">
                     <h1 class="txt-xlarge fancy_text">Projects</h1>
                 </div>
@@ -21,12 +19,7 @@ let pageDescription = "View my projects and resume.";
                 <p class="top_bottom-p1 txt-medium hero-text">
                     I will post my projects here directly when I get the chance. But
                     check out my
-                    <a
-                        href="https://github.com/lpmurray16"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        >GitHub!</a
-                    >
+                    <a href="https://github.com/lpmurray16" rel="noopener noreferrer" target="_blank">GitHub!</a>
                 </p>
                 <div class="w100">
                     <a href="/about-me">
@@ -34,17 +27,10 @@ let pageDescription = "View my projects and resume.";
                     </a>
                 </div>
             </div>
-            <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center txt-center stack-top"
-            >
-                <img
-                    src="../assets/guy_at_desk.svg"
-                    data-tilt
-                    alt="guy sitting at desk"
-                    class="loop_pic fancy-border"
-                />
+            <div data-aos="fade-left" data-aos-duration="1000"
+                class="flex_col col_50-100 flex_center txt-center stack-top">
+                <img src="../assets/guy_at_desk.svg" data-tilt alt="guy sitting at desk"
+                    class="loop_pic fancy-border" />
             </div>
         </section>
         <!-- END OF HERO SECTION -->
@@ -56,41 +42,29 @@ let pageDescription = "View my projects and resume.";
 
             <div id="basic-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
                 <h3 class="language_header w100 fb100">HTML/CSS/JS Projects</h3>
-                <ProjectCard anchor="astro-site"
-                    projectName="Astro Auto Parts"
+                <ProjectCard anchor="astro-site" projectName="Astro Auto Parts"
                     shortDesc="For an interview I refactored a landing page to showcase my UI/UX and development skills."
-                    projectLink="https://astro-auto-parts.vercel.app/"
-                    projectImg="/assets/car-wheel.png"
-                />
-                <ProjectCard anchor="drums-site"
-                    projectName="Drum Kit JS"
+                    projectLink="https://astro-auto-parts.vercel.app/" projectImg="/assets/car-wheel.png" />
+                <ProjectCard anchor="drums-site" projectName="Drum Kit JS"
                     shortDesc="Practice with JavaScript and the DOM to create a drum kit."
-                    projectLink="https://drumkit-1.vercel.app/"
-                    projectImg="/assets/drum.png"
-                />
+                    projectLink="https://drumkit-1.vercel.app/" projectImg="/assets/drum.png" />
+                <ProjectCard anchor="clock-site" projectName="Simple Analog Clock"
+                    shortDesc="Practice with JavaScript Date method and CSS manipulation."
+                    projectLink="https://analog-clock-xi.vercel.app/" projectImg="/assets/clock.png" />
             </div>
             <div id="react-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
                 <h3 class="language_header w100 fb100">React Projects</h3>
-                <ProjectCard anchor="react-img-search" 
-                    projectName="React Image Search" 
-                    shortDesc="A simple image search webapp written in ReactJS utilizing the Unsplash API." 
-                    projectLink="https://pics-unsplash.vercel.app/" 
-                    projectImg="/assets/img_search.png" 
-                />
-                <ProjectCard anchor="react-video-search" 
-                    projectName="React Video Search" 
-                    shortDesc="A simple video search webapp written in ReactJS utilizing the YouTube API." 
-                    projectLink="https://yt-video-clone.vercel.app/" 
-                    projectImg="/assets/video_search.png" 
-                />
-                <ProjectCard anchor="react-widgets" 
-                    projectName="React Widgets" 
-                    shortDesc="A small collection of ReactJS widgets. Uses Wikipedia API and Google Translate API." 
-                    projectLink="https://widgets-simple.vercel.app/" 
-                    projectImg="/assets/settings.png" 
-                />
+                <ProjectCard anchor="react-img-search" projectName="React Image Search"
+                    shortDesc="A simple image search webapp written in ReactJS utilizing the Unsplash API."
+                    projectLink="https://pics-unsplash.vercel.app/" projectImg="/assets/img_search.png" />
+                <ProjectCard anchor="react-video-search" projectName="React Video Search"
+                    shortDesc="A simple video search webapp written in ReactJS utilizing the YouTube API."
+                    projectLink="https://yt-video-clone.vercel.app/" projectImg="/assets/video_search.png" />
+                <ProjectCard anchor="react-widgets" projectName="React Widgets"
+                    shortDesc="A small collection of ReactJS widgets. Uses Wikipedia API and Google Translate API."
+                    projectLink="https://widgets-simple.vercel.app/" projectImg="/assets/settings.png" />
             </div>
-            
+
         </section>
     </div>
     <!-- END OF SECTION -->
