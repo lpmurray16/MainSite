@@ -239,12 +239,15 @@ a:hover {
           text-decoration: underline #e53170;
 }
 
-.download_icon::before {
-  content: url("/assets/download_icon.png");
+.download_icon {
+  background: url("/assets/download_icon.png");
   width: 18px;
   height: 18px;
   margin: 0 8px 0 0;
   display: inline-flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .cta {
@@ -284,6 +287,7 @@ a:hover {
   width: max-content;
   display: inline-flex;
   text-decoration: none;
+  margin: 4px;
 }
 .cta--link:hover, .cta--link:focus {
   text-decoration: none;
@@ -544,6 +548,7 @@ body {
   margin-top: 60px;
 }
 .sidebar_nav_list {
+  background-color: #0f0e17;
   list-style: none;
 }
 .sidebar_nav_list a {
@@ -910,6 +915,7 @@ figure figcaption {
 @media screen and (max-width: 450px) {
   .prof_pic {
     max-width: 200px;
+    margin: 20px auto;
   }
 }
 
@@ -1017,7 +1023,7 @@ figure figcaption {
     height: 467px;
     right: 0;
     position: fixed;
-    top: 50%;
+    top: 38%;
     transform: translateY(-50%);
     border-radius: 8px 0 0 8px;
     width: 200px;

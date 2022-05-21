@@ -223,12 +223,15 @@ a {
     }
 }
 // download icons
-.download_icon::before {
-    content: url("/assets/download_icon.png");
+.download_icon {
+    background: url("/assets/download_icon.png");
     width: 18px;
     height: 18px;
     margin: 0 8px 0 0;
     display: inline-flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 // buttons
 .cta {
@@ -270,6 +273,7 @@ a {
         width: max-content;
         display: inline-flex;
         text-decoration: none;
+        margin: 4px;
         &:hover,
         &:focus {
             text-decoration: none;
@@ -535,6 +539,7 @@ body {
 .sidebar_nav {
     margin-top: 60px;
     &_list {
+        background-color: $background;
         list-style: none;
         a {
             text-decoration: none;
@@ -856,6 +861,7 @@ figure figcaption {
 .prof_pic {
     @media screen and (max-width: 450px) {
         max-width: 200px;
+        margin: 20px auto;
     }
 }
 // LARGE screens
@@ -963,7 +969,7 @@ figure figcaption {
         height: 467px;
         right: 0;
         position: fixed;
-        top: 50%;
+        top: 38%;
         transform: translateY(-50%);
         border-radius: 8px 0 0 8px;
         width: 200px;

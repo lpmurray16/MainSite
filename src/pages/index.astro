@@ -1,79 +1,72 @@
 ---
-import "../styles/global.css";
-import MainLayout from "../layouts/MainLayout.astro";
-import CardsSection from "../components/CardsSection.astro";
-let pageTitle = "Logan Murray - Frontend Developer";
-let pageDescription = "Logan Murray is a frontend developer based in Chicago, IL. He has a passion for creating beautiful and intuitive user experiences.";
+	import "../styles/global.css";
+	import MainLayout from "../layouts/MainLayout.astro";
+	import CardsSection from "../components/CardsSection.astro";
+	let pageTitle = "Logan Murray - Frontend Developer";
+	let pageDescription = "Logan Murray is a frontend developer based in Chicago, IL. He has a passion for creating beautiful and intuitive user experiences.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
-<div class="main_content index">
-	<!-- START HERO SECTION -->
-	<section class="hero bg-dark w100 flex flex_wrap flex_center-all">
-		<div class="flex_col col_50-100 flex_center stack-bottom hero-left">
-			<div class="w100">
-				<h1 class="txt-xlarge fancy_text">Logan Murray</h1>
-				<h2 class="txt-large">Frontend Developer</h2>
-			</div>
+	<div class="main_content index">
+		<!-- START HERO SECTION -->
+		<section class="hero bg-dark w100 flex flex_wrap flex_center-all">
+			<div class="flex_col col_50-100 flex_center stack-bottom hero-left">
+				<div class="w100">
+					<h1 class="txt-xlarge fancy_text">Logan Murray</h1>
+					<h2 class="txt-large">Frontend Developer</h2>
+				</div>
 
-			<p class="top_bottom-p1 txt-medium hero-text not-mobile">
-				DePaul University - March 2020<br />
-				<i>BS in Computer Science - Software Development</i
-				><br />
-				My commencement is a 3 hour YouTube video that I watched
-				in my pajamas at home. Shortly after graduation my
-				interests shifted to the world of web development and I
-				have been picking up and learning new skills everyday.
-				My main goal is to eventually become a reliable and
-				capable fullstack web developer.
-			</p>
-			<p class="top_bottom-p1 txt-medium hero-text mobile-only">
-				DePaul University - March 2020<br />
-				<i>BS in Computer Science: Software Development</i>
-				<br />
-				I am a continuously growing frontend developer based in Chicago, IL. 
-				And I hope to one day soon become a reliable and capable fullstack web developer.
-			</p>
-			
-			<div class="w100">
-				<a class="cta--link" href="/about-me">
-					<button class="cta">Learn More About Me</button>
-				</a>
-				<a class="cta--link cta--resume" href="/assets/Murray_04-09-22.pdf" download="Murray_Resume.pdf">
-					<button class="cta cta--secondary"><i class="download_icon"></i>Resume</button>
-				</a>
-			</div>
-		</div>
-		<div
-			class="flex_col col_50-100 flex_center txt-center stack-top"
-		>
-			<img
-				src="assets/prof_blacksuit_bg_square-removebg-preview.png"
-				data-tilt
-				alt="Picture of Me, Logan"
-				class="prof_pic fancy-border img-circle gradientWave"
-			/>
-		</div>
-		<div class="stack-bottom2 w100 not-mobile">
-			<h1 class="section_header">Skills & Languages</h1>
-			<h3 class="section_caption">
-				I am constantly working on my development skills. I like to
-				learn something new everyday. Here is a quick breakdown of
-				the things I know.
-			</h3>
-			<div class="w100 flex flex_center-all down-arrow">
-				<svg xmlns="http://www.w3.org/2000/svg" 
-				viewBox="0 0 448 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
-				<path  fill="#fff" d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/>
-				</svg>
-			</div>
-		</div>
-	</section>
-	<!-- END OF HERO SECTION -->
+				<p class="top_bottom-p1 txt-medium hero-text not-mobile">
+					DePaul University - March 2020<br />
+					<i>BS in Computer Science - Software Development</i><br />
+					My commencement is a 3 hour YouTube video that I watched
+					in my pajamas at home. Shortly after graduation my
+					interests shifted to the world of web development and I
+					have been picking up and learning new skills everyday.
+					My main goal is to eventually become a reliable and
+					capable fullstack web developer.
+				</p>
+				<p class="top_bottom-p1 txt-medium hero-text mobile-only">
+					DePaul University - March 2020<br />
+					<i>BS in Computer Science: Software Development</i>
+					<br />
+					I am a Frontend Developer based outside of Chicago, IL working my way to become fullstack.
+				</p>
 
-	<!-- START OF CARDS SECTION -->
-	<CardsSection />
-	<!-- END OF CARDS SECTION -->
-</div>
-	
+				<div class="w100 flex flex_wrap">
+					<a class="cta--link" href="/about-me">
+						<button class="cta">Learn More About Me</button>
+					</a>
+					<a class="cta--link cta--resume" href="/assets/Murray_04-09-22.pdf" download="Murray_Resume.pdf">
+						<button class="cta cta--secondary"><i class="download_icon"></i>Resume</button>
+					</a>
+				</div>
+			</div>
+			<div class="flex_col col_50-100 flex_center txt-center stack-top">
+				<img src="assets/prof_blacksuit_bg_square-removebg-preview.png" data-tilt alt="Picture of Me, Logan"
+					class="prof_pic fancy-border img-circle gradientWave" />
+			</div>
+			<div class="stack-bottom2 w100 not-mobile">
+				<h1 class="section_header">Skills & Languages</h1>
+				<h3 class="section_caption">
+					I am constantly working on my development skills. I like to
+					learn something new everyday. Here is a quick breakdown of
+					the things I know.
+				</h3>
+				<div class="w100 flex flex_center-all down-arrow">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+						<!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
+						<path fill="#fff"
+							d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z" />
+					</svg>
+				</div>
+			</div>
+		</section>
+		<!-- END OF HERO SECTION -->
+
+		<!-- START OF CARDS SECTION -->
+		<CardsSection />
+		<!-- END OF CARDS SECTION -->
+	</div>
+
 </MainLayout>
