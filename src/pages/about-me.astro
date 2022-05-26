@@ -1,28 +1,22 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-let pageTitle = "About Me - Logan Murray";
-let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
+    import MainLayout from "../layouts/MainLayout.astro";
+    let pageTitle = "About Me - Logan Murray";
+    let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
 ---
+
 <MainLayout title={pageTitle} description={pageDescription}>
     <div class="main_content about-me">
         <!-- START HERO SECTION -->
         <section class="hero bg-dark w100 flex flex_wrap flex_center-all">
-            <div
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center stack-bottom hero-left"
-            >
+            <div class="flex_col col_50-100 flex_center stack-bottom hero-left">
                 <div class="w100">
                     <h1 class="txt-xlarge fancy_text">About Me</h1>
                 </div>
 
                 <p class="top_bottom-p1 txt-medium hero-text">
-                    From Frontend Developer at Officite to sole Web & Content
+                    Frontend Developer at Officite to sole Web & Content
                     Developer at Boost Auto Parts, my journey to grow in both my
-                    personal life and career is always evolving for the better. I
-                    live in beautiful St. Charles, IL with my lovely wife and
-                    daughter. We have two mini Australian-Shepards named Quill and
-                    Bodie.
+                    personal life and career is always evolving for the better.
                 </p>
                 <div class="w100">
                     <a href="/future-goals">
@@ -30,17 +24,8 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
                     </a>
                 </div>
             </div>
-            <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center txt-center stack-top"
-            >
-                <img
-                    src="../assets/depaul.jpg"
-                    data-tilt
-                    alt="Loop Campus"
-                    class="loop_pic fancy-border"
-                />
+            <div class="flex_col col_50-100 flex_center txt-center stack-top">
+                <img src="../assets/depaul.jpg" alt="Loop Campus" class="loop_pic fancy-border" />
             </div>
         </section>
         <!-- END OF HERO SECTION -->
@@ -49,77 +34,51 @@ let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
         <section class="bg-light">
             <h1 class="section_header">My Family</h1>
             <h3 class="section_caption">
-                My loving wife (<span class="orange-underline">Courtney</span>) and
+                I live with my beautiful wife (<span class="orange-underline">Courtney</span>) and our
                 two dorky dogs (<span class="orange-underline">Bodie & Quill</span>)
-                all take care of my newborn daughter (<span class="orange-underline"
-                    >Elsie</span
-                >).
+                and we all take care of our daughter (<span class="orange-underline">Elsie</span>).
             </h3>
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
                         <li class="glide__slide">
                             <figure>
-                                <img
-                                    src="https://i.ibb.co/gM1zh9w/bodie1.jpg"
-                                    alt="Bodie"
-                                />
-                            
+                                <img src="https://i.ibb.co/gM1zh9w/bodie1.jpg" alt="Bodie" />
+
                             </figure>
                         </li>
                         <li class="glide__slide">
                             <figure>
-                                <img
-                                    src="https://i.ibb.co/kg1dbqD/quill1.jpg"
-                                    alt="Quill"
-                                />
-                                
+                                <img src="https://i.ibb.co/kg1dbqD/quill1.jpg" alt="Quill" />
+
                             </figure>
                         </li>
                         <li class="glide__slide">
                             <figure>
-                                <img
-                                    src="https://i.ibb.co/zx5BG4m/IMG-6561.jpg"
-                                    alt="My Wife and I"
-                                />
-                                
+                                <img src="https://i.ibb.co/zx5BG4m/IMG-6561.jpg" alt="My Wife and I" />
+
                             </figure>
                         </li>
                         <li class="glide__slide">
                             <figure>
-                                <img
-                                    src="https://i.ibb.co/MDWHkN3/both1.jpg"
-                                    alt="Quill and Bodie"
-                                />
-                                
+                                <img src="https://i.ibb.co/MDWHkN3/both1.jpg" alt="Quill and Bodie" />
+
                             </figure>
                         </li>
                         <li class="glide__slide">
                             <figure>
-                                <img
-                                    src="https://i.ibb.co/93w9bS6/both3.jpg"
-                                    alt="Quill and Bodie"
-                                />
-                                
+                                <img src="https://i.ibb.co/93w9bS6/both3.jpg" alt="Quill and Bodie" />
+
                             </figure>
                         </li>
                     </ul>
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
-                    <button
-                        class="glide__arrow glide__arrow--left"
-                        data-glide-dir="<"
-                    >
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
                         <img src="../assets/back-arrow.svg" alt="backward arrow" />
                     </button>
-                    <button
-                        class="glide__arrow glide__arrow--right"
-                        data-glide-dir=">"
-                    >
-                        <img
-                            src="../assets/forward-arrow.svg"
-                            alt="forward arrow"
-                        />
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
+                        <img src="../assets/forward-arrow.svg" alt="forward arrow" />
                     </button>
                 </div>
             </div>

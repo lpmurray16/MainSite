@@ -2,6 +2,16 @@
   --font-size: 16px;
 }
 
+::-moz-selection {
+  background: #ff8906;
+  color: #fffffe;
+}
+
+::selection {
+  background: #ff8906;
+  color: #fffffe;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -76,7 +86,7 @@
 }
 
 .fancy-border {
-  box-shadow: 0 0 0 10px #f25f4c, 0 0 0 20px #e53170;
+  box-shadow: 0 0 0 6px #f25f4c, 0 0 0 12px #e53170;
 }
 
 .fancy_text {

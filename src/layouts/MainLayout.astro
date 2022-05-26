@@ -1,9 +1,9 @@
 ---
-    import HeaderSection from "../components/HeaderSection.astro";
-    import Footer from "../components/Footer.astro";
-    import "../styles/global.css";
-    let title = Astro.props.title;
-    let description = Astro.props.description;
+import HeaderSection from "../components/HeaderSection.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+let title = Astro.props.title;
+let description = Astro.props.description;
 
 ---
 
@@ -22,13 +22,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="stylesheet" href="../styles/global.css" />
     <script>
-            // Height fix
-            let vh = window.innerHeight * 0.01;
-            document.documentElement.style.setProperty("--vh", `${vh}px`);
-        </script>
-
+        // Height fix
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    </script>
+    <!-- Primary Meta Tags -->
+    <meta name="title" content={title}>
+    <meta name="description" content={description}>
     <title>{title}</title>
     <meta name="description" content={description} />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://logan-murray.dev/">
+    <meta property="og:title" content={title}>
+    <meta property="og:description" content={description}>
+    <meta property="og:image" content="assets/prof_blacksuit_bg_square-removebg-preview.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://logan-murray.dev/">
+    <meta property="twitter:title" content={title}>
+    <meta property="twitter:description" content={description}>
+    <meta property="twitter:image" content="assets/prof_blacksuit_bg_square-removebg-preview.png">
+
+
 </head>
 
 <body style="min-height: -webkit-fill-available;">

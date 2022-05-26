@@ -1,17 +1,14 @@
 ---
-import MainLayout from "../layouts/MainLayout.astro";
-let pageTitle = "Future Goals - Logan Murray";
-let pageDescription = "Learn More About my Goals, Logan Murray, Frontend Developer";
+    import MainLayout from "../layouts/MainLayout.astro";
+    let pageTitle = "Future Goals - Logan Murray";
+    let pageDescription = "Learn More About my Goals, Logan Murray, Frontend Developer";
 ---
+
 <MainLayout title={pageTitle} description={pageDescription}>
     <div class="main_content future-goals">
         <!-- START HERO SECTION -->
         <section class="hero bg-dark w100 flex flex_wrap flex_center-all">
-            <div
-                data-aos="fade-right"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center stack-bottom hero-left"
-            >
+            <div class="flex_col col_50-100 flex_center stack-bottom hero-left">
                 <div class="w100">
                     <h1 class="txt-xlarge fancy_text">Future Goals</h1>
                 </div>
@@ -20,12 +17,7 @@ let pageDescription = "Learn More About my Goals, Logan Murray, Frontend Develop
                     I am continually improving myself until I become a Fullstack Web
                     Developer. One big goal I have at the moment is to complete this
                     portfolio. But for now, check out my
-                    <a
-                        href="https://github.com/lpmurray16"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                        >GitHub!</a
-                    >
+                    <a href="https://github.com/lpmurray16" rel="noopener noreferrer" target="_blank">GitHub!</a>
                 </p>
                 <div class="w100">
                     <a href="/about-me">
@@ -33,17 +25,8 @@ let pageDescription = "Learn More About my Goals, Logan Murray, Frontend Develop
                     </a>
                 </div>
             </div>
-            <div
-                data-aos="fade-left"
-                data-aos-duration="1000"
-                class="flex_col col_50-100 flex_center txt-center stack-top"
-            >
-                <img
-                    src="../assets/future_me.svg"
-                    data-tilt
-                    alt="future me svg"
-                    class="loop_pic fancy-border"
-                />
+            <div class="flex_col col_50-100 flex_center txt-center stack-top">
+                <img src="../assets/future_me.svg" alt="future me svg" class="loop_pic" />
             </div>
         </section>
         <!-- END OF HERO SECTION -->

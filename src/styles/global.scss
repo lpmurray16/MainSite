@@ -2,6 +2,10 @@
 :root {
     --font-size: 16px;
 }
+::selection {
+    background: $orange;
+    color: $headline;
+}
 // Refactoring my website to include SASS
 * {
     margin: 0;
@@ -70,7 +74,7 @@
     border-radius: 50%;
 }
 .fancy-border {
-    box-shadow: 0 0 0 10px $peachy, 0 0 0 20px $extra;
+    box-shadow: 0 0 0 6px $peachy, 0 0 0 12px $extra;
 }
 .fancy_text {
     text-shadow: 0.07em 0.07em 0px #0a090f, 0.1em 0.1em 0px #ff8907,
