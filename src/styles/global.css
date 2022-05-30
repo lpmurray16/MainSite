@@ -647,12 +647,25 @@ body {
   display: flex;
   flex-flow: column;
   height: 160px;
+  position: relative;
 }
 .social_icons div img {
   max-width: 120px;
 }
 .social_icons .hidden-text {
   display: none;
+  padding-top: 1em;
+}
+.social_icons .hidden-text:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  top: 120px;
+  left: 50px;
 }
 
 .footer .section_caption {
@@ -800,10 +813,30 @@ figure figcaption {
   background-color: #ff8906;
   border: 7px inset #e53170;
 }
+.circle span.tooltip:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  top: -24px;
+  left: 50px;
+}
+
+.animate {
+  opacity: 0;
+}
 
 .fadeUpInLeft {
-  -webkit-animation: fadeUpInLeft 1s both;
-          animation: fadeUpInLeft 1s both;
+  -webkit-animation: fadeUpInLeft 500ms both;
+          animation: fadeUpInLeft 500ms both;
+}
+
+.fadeUpInRight {
+  -webkit-animation: fadeUpInRight 500ms both;
+          animation: fadeUpInRight 500ms both;
 }
 
 .gradientWave {
@@ -857,11 +890,6 @@ figure figcaption {
     transform: translateY(0) translateX(0);
   }
 }
-.fadeUpInRight {
-  -webkit-animation: fadeUpInRight 1s both;
-          animation: fadeUpInRight 1s both;
-}
-
 @-webkit-keyframes fadeUpInRight {
   0% {
     opacity: 0;
@@ -872,7 +900,6 @@ figure figcaption {
     transform: translateY(0) translateX(0);
   }
 }
-
 @keyframes fadeUpInRight {
   0% {
     opacity: 0;

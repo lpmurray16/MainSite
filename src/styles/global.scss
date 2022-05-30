@@ -641,9 +641,22 @@ body {
         img {
             max-width: 120px;
         }
+        position: relative;
     }
     .hidden-text {
         display: none;
+        padding-top: 1em;
+        &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-width: 10px;
+            border-style: solid;
+            border-color: transparent transparent #ffffff transparent;
+            top: 120px;
+            left: 50px;
+        }
     }
 }
 
@@ -777,11 +790,28 @@ figure figcaption {
     width: 50px;
     border-radius: 50%;
     background-color: $orange;
+    span.tooltip:after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-width: 10px;
+        border-style: solid;
+        border-color: transparent transparent #ffffff transparent;
+        top: -24px;
+        left: 50px;
+    }
     border: 7px inset $extra;
 }
 ////////////// Animations /////////////////
+.animate {
+    opacity: 0;
+}
 .fadeUpInLeft {
-    animation: fadeUpInLeft 1s both;
+    animation: fadeUpInLeft 500ms both;
+}
+.fadeUpInRight {
+    animation: fadeUpInRight 500ms both;
 }
 .gradientWave {
     animation: gradientWave 4s ease infinite;
@@ -809,9 +839,6 @@ figure figcaption {
         opacity: 1;
         transform: translateY(0) translateX(0);
     }
-}
-.fadeUpInRight {
-    animation: fadeUpInRight 1s both;
 }
 @keyframes fadeUpInRight {
     0% {
