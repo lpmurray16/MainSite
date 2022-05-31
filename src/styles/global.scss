@@ -645,18 +645,7 @@ body {
     }
     .hidden-text {
         display: none;
-        padding-top: 1em;
-        &:after {
-            content: "";
-            position: absolute;
-            width: 0;
-            height: 0;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent #ffffff transparent;
-            top: 120px;
-            left: 50px;
-        }
+        padding-top: 0.75em;
     }
 }
 
