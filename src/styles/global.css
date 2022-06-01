@@ -151,6 +151,13 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
 }
+@media screen and (max-width: 550px) {
+  .index .hero {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 
 .hero {
   height: 100vh;
@@ -159,6 +166,13 @@
 }
 .hero .hero-text {
   max-width: 40ch;
+}
+@media screen and (max-width: 550px) {
+  .hero {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
 }
 
 .bg-dark {
