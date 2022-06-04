@@ -1,7 +1,7 @@
 ---
-    import MainLayout from "../layouts/MainLayout.astro";
-    let pageTitle = "About Me - Logan Murray";
-    let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
+import MainLayout from "../layouts/MainLayout.astro";
+let pageTitle = "About Me - Logan Murray";
+let pageDescription = "Learn More About ME, Logan Murray, Frontend Developer";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -25,7 +25,7 @@
                 </div>
             </div>
             <div class="flex_col col_50-100 flex_center txt-center stack-top">
-                <img src="../assets/depaul.jpg" alt="Loop Campus" class="loop_pic fancy-border" />
+                <img src="../assets/depaul.jpg" alt="Loop Campus" id="loop_pic" class="fancy-border" />
             </div>
         </section>
         <!-- END OF HERO SECTION -->

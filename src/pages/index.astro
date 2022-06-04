@@ -1,9 +1,9 @@
 ---
-	import "../styles/global.css";
-	import MainLayout from "../layouts/MainLayout.astro";
-	import CardsSection from "../components/CardsSection.astro";
-	let pageTitle = "Logan Murray - Frontend Developer";
-	let pageDescription = "Logan Murray is a frontend developer based in Chicago, IL. He has a passion for creating beautiful and intuitive user experiences.";
+import "../styles/global.css";
+import MainLayout from "../layouts/MainLayout.astro";
+import CardsSection from "../components/CardsSection.astro";
+let pageTitle = "Logan Murray - Frontend Developer";
+let pageDescription = "Logan Murray is a frontend developer based in Chicago, IL. He has a passion for creating beautiful and intuitive user experiences.";
 ---
 
 <MainLayout title={pageTitle} description={pageDescription}>
@@ -42,9 +42,10 @@
 					</a>
 				</div>
 			</div>
-			<div class="flex_col col_50-100 flex_center txt-center stack-top">
-				<img src="assets/prof_blacksuit_bg_square-removebg-preview.png" data-tilt alt="Picture of Me, Logan"
-					class="prof_pic fancy-border img-circle gradientWave" />
+			<div class="flex_col col_50-100 flex_center txt-center stack-top hero-right">
+				<img src="assets/prof_blacksuit_bg_square-removebg-preview.png"
+					alt="Picture of Me, Logan - Frontend Developer" id="prof_pic"
+					class="fancy-border img-circle gradientWave" />
 			</div>
 			<div class="stack-bottom2 w100 not-mobile">
 				<h1 class="section_header">Skills & Languages</h1>
