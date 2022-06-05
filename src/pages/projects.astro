@@ -1,8 +1,8 @@
 ---
-    import MainLayout from "../layouts/MainLayout.astro";
-    import ProjectCard from "../components/ProjectCard.astro";
-    let pageTitle = "My Project - Logan Murray, Frontend Developer";
-    let pageDescription = "View my projects and resume.";
+import MainLayout from "../layouts/MainLayout.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+let pageTitle = "My Project - Logan Murray, Frontend Developer";
+let pageDescription = "View my projects and resume.";
 
 ---
 
@@ -60,6 +60,9 @@
                 <ProjectCard anchor="react-widgets" projectName="React Widgets"
                     shortDesc="A small collection of ReactJS widgets. Uses Wikipedia API and Google Translate API."
                     projectLink="https://widgets-simple.vercel.app/" projectImg="/assets/settings.png" />
+                <ProjectCard anchor="react-hp-quiz" projectName="React HP Quiz"
+                    shortDesc="A simple yet scalable quiz application using Astro and React."
+                    projectLink="https://hp-quiz-app.netlify.app/" projectImg="/assets/magic-wand.png" />
             </div>
 
         </section>
