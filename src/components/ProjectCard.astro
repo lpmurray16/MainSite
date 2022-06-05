@@ -1,67 +1,86 @@
 ---
-    let anchorTag = Astro.props.anchor;
-    let projectName = Astro.props.projectName;
-    let shortDesc = Astro.props.shortDesc;
-    let projLink = Astro.props.projectLink;
-    let projImg = Astro.props.projectImg;
+let anchorTag = Astro.props.anchor;
+let projectName = Astro.props.projectName;
+let shortDesc = Astro.props.shortDesc;
+let projLink = Astro.props.projectLink;
+let projImg = Astro.props.projectImg;
 ---
-    <style lang="scss">
-        .project {
-            &_outter_wrap {
-                flex-basis: 49%;
-                margin: 1.2em auto;
-                @media screen and (max-width: 768px) {
-                    flex-basis: 100%;
-                    margin: 1em auto;
-                }
+
+<style lang="scss">
+    .project {
+        &_outter_wrap {
+            flex-basis: 49%;
+            margin: 1.2em auto;
+
+            @media screen and (max-width: 768px) {
+                flex-basis: 100%;
+                margin: 1em auto;
             }
-            &_inner_wrap {
-                max-width: 100%;
+        }
+
+        &_inner_wrap {
+            max-width: 100%;
+            width: 100%;
+            margin: 0 auto;
+            padding: 1.5em;
+            gap: 2em;
+            background-color: #0f0e17;
+            border-radius: 4px;
+
+            @media screen and (max-width: 768px) {
                 width: 100%;
-                margin: 0 auto;
-                padding: 1.5em;
-                gap: 2em;
-                background-color: #0f0e17;
-                border-radius: 4px;
-                @media screen and (max-width: 768px) {
-                    width: 100%;
-                }
-            }
-            &_title {
-                font-size: 1.5em;
-                font-weight: bold;
-                margin: 0;
-                padding: 0;
-                color: #fffffe;
-            }
-            &_desc {
-                max-width: 40ch;
-                padding: 1em 0;
-                color: #fffffe;
             }
         }
-        .stack {
-            &-top{
-                order: 1;
-                padding-top: 0;
-            }
-            &-bottom {
-                order: 2;
-                padding-bottom: 0;
+
+        &_title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+            color: #fffffe;
+        }
+
+        &_desc {
+            max-width: 40ch;
+            padding: 1em 0;
+            color: #fffffe;
+        }
+
+        &_img {
+            max-width: 100%;
+            width: 180px;
+            margin: 0 auto;
+            margin: 2px;
+
+            @media screen and (max-width: 768px) {
+                width: 100%;
             }
         }
-    </style>
-    <div id={anchorTag} class="project_outter_wrap">
-        <div class="flex flex_wrap flex_center-all project_inner_wrap">
-            <div class="flex flex_col stack-bottom">
-                <h4 class="project_title fancy_text">{projectName}</h4>
-                <p class="project_desc">{shortDesc}</p>
-                <a href={projLink} class="project_link" rel="noopener noreferrer" target="_blank">
-                    <button class="cta">View Project</button>
-                </a>
-            </div>
-            <div class="flex stack-top">
-                <img src={projImg} alt={projectName} class="project_img" />
-            </div>
+    }
+
+    .stack {
+        &-top {
+            order: 1;
+            padding-top: 0;
+        }
+
+        &-bottom {
+            order: 2;
+            padding-bottom: 0;
+        }
+    }
+</style>
+<div id={anchorTag} class="project_outter_wrap">
+    <div class="flex flex_wrap flex_center-all project_inner_wrap">
+        <div class="flex flex_col stack-bottom">
+            <h4 class="project_title fancy_text">{projectName}</h4>
+            <p class="project_desc">{shortDesc}</p>
+            <a href={projLink} class="project_link" rel="noopener noreferrer" target="_blank">
+                <button class="cta">View Project</button>
+            </a>
+        </div>
+        <div class="flex stack-top">
+            <img src={projImg} alt={projectName} class="project_img" />
         </div>
     </div>
+</div>
