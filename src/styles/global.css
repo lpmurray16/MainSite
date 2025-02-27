@@ -147,32 +147,13 @@
   width: 50%;
 }
 
-.index .hero {
-  height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
-}
-@media screen and (max-width: 1200px) {
-  .index .hero {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-
 .hero {
   height: 100vh;
-  height: calc(var(--vh, 1vh) * 100);
+  min-height: 100dvh;
   padding-top: 5.45em;
 }
 .hero .hero-text {
   max-width: 40ch;
-}
-@media screen and (max-width: 550px) {
-  .hero {
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
 }
 
 .bg-dark {
@@ -310,7 +291,6 @@ a:hover {
   }
 }
 .cta--link {
-  width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   display: inline-flex;
@@ -369,10 +349,6 @@ form .submit {
 }
 
 ::-moz-placeholder {
-  color: #a7a9be;
-}
-
-:-ms-input-placeholder {
   color: #a7a9be;
 }
 
@@ -839,33 +815,18 @@ figure figcaption {
 }
 
 .fadeUpInLeft {
-  -webkit-animation: fadeUpInLeft 500ms both;
-          animation: fadeUpInLeft 500ms both;
+  animation: fadeUpInLeft 500ms both;
 }
 
 .fadeUpInRight {
-  -webkit-animation: fadeUpInRight 500ms both;
-          animation: fadeUpInRight 500ms both;
+  animation: fadeUpInRight 500ms both;
 }
 
 .gradientWave {
-  -webkit-animation: gradientWave 4s ease infinite;
-          animation: gradientWave 4s ease infinite;
+  animation: gradientWave 4s ease infinite;
   background: #ff8906;
   background: linear-gradient(-45deg, #ff8906, #f25f4c, #e53170);
   background-size: 300% 300%;
-}
-
-@-webkit-keyframes gradientWave {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 @keyframes gradientWave {
@@ -879,30 +840,10 @@ figure figcaption {
     background-position: 0% 50%;
   }
 }
-@-webkit-keyframes fadeUpInLeft {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-  }
-}
 @keyframes fadeUpInLeft {
   0% {
     opacity: 0;
     transform: translateY(30px) translateX(-30px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) translateX(0);
-  }
-}
-@-webkit-keyframes fadeUpInRight {
-  0% {
-    opacity: 0;
-    transform: translateY(30px) translateX(30px);
   }
   100% {
     opacity: 1;
@@ -923,7 +864,6 @@ figure figcaption {
   .header .desktop-nav {
     display: none;
   }
-
   .menu__text {
     color: #fffffe;
   }
@@ -931,11 +871,9 @@ figure figcaption {
     display: flex;
     padding: 0 3vw;
   }
-
   .col_50-100 {
     width: 100%;
   }
-
   .stack-top {
     order: 1;
     padding-top: 3.5em;
@@ -994,22 +932,18 @@ figure figcaption {
   .index .hero-left {
     padding-left: 15vw;
   }
-
   .hero-left .txt-large {
     padding-top: 0.5em;
   }
-
   .txt-xlarge {
     font-size: 5em;
   }
-
   .projects .txt-medium,
-.about-me .txt-medium,
-.future-goals .txt-medium {
+  .about-me .txt-medium,
+  .future-goals .txt-medium {
     font-size: 1.6rem;
     line-height: 1.8;
   }
-
   .hero-left .cta {
     font-size: 1.3rem;
   }
@@ -1028,11 +962,9 @@ figure figcaption {
   .hero-left .txt-large {
     padding-top: 0.5em;
   }
-
   .menu__text {
     display: none;
   }
-
   .zigzag-timeline__item {
     position: relative;
     border-bottom: 1px solid #71717a;
@@ -1040,17 +972,14 @@ figure figcaption {
     margin: 0 auto;
     padding: 2em;
   }
-
   .zigzag-timeline__item:nth-child(2n+1) .circle {
     position: absolute;
     right: -20px;
   }
-
   .zigzag-timeline__item:nth-child(2n) .circle {
     position: absolute;
     left: -20px;
   }
-
   .circle {
     height: 40px;
     width: 40px;
@@ -1058,24 +987,20 @@ figure figcaption {
     background-color: #ff8906;
     border: 7px inset #e53170;
   }
-
   .section_caption {
     line-height: 1.8;
     text-align: left;
     max-width: 40ch;
     margin: 0 auto 2em;
   }
-
   .top_bottom-p1 {
     padding: 1em 0;
   }
-
   .icon {
     width: 90px;
     height: auto;
     margin: 20px 0 0 20px;
   }
-
   .menu__container {
     position: fixed;
     bottom: 4%;
@@ -1085,7 +1010,6 @@ figure figcaption {
     padding: 0 1vw;
     border-radius: 4px;
   }
-
   .cover__sidebar {
     height: 467px;
     right: 0;
@@ -1096,7 +1020,6 @@ figure figcaption {
     width: 200px;
     background-color: #0f0e17;
   }
-
   /* width of scrollbar */
   ::-webkit-scrollbar {
     width: 0px;
