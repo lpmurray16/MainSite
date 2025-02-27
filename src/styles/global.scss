@@ -121,24 +121,13 @@
         width: 50%;
     }
 }
-.index .hero {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
 
-    @media screen and (max-width: 1200px) {
-        height: fit-content;
-    }
-}
 .hero {
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
     min-height: 100dvh;
     padding-top: 5.45em;
     .hero-text {
         max-width: 40ch;
-    }
-    @media screen and (max-width: 550px) {
-        height: fit-content;
     }
 }
 // HELPER CLASSES FOR BACKGROUND CONTRAST
