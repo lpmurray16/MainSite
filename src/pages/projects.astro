@@ -1,7 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
-let pageTitle = "My Project - Logan Murray, Frontend Developer";
+let pageTitle = "My Projects - Logan Murray, Software Engineer";
 let pageDescription = "View my projects and resume.";
 
 ---
@@ -51,6 +51,9 @@ let pageDescription = "View my projects and resume.";
             </div>
             <div id="react-projects" class="flex flex_wrap flex_center-all flex_gap-small w100">
                 <h3 class="language_header w100 fb100">React Projects</h3>
+                <ProjectCard anchor="my-fav-things" projectName="MyFavoriteThings"
+                    shortDesc="Image storage and public slideshow. Made for my 3 year old who likes to look at the same 3 pictures."
+                    projectLink="https://mfts.netlify.app/" projectImg="https://i.ibb.co/fdzQvNhk/photo-gallery.png" />
                 <ProjectCard anchor="react-img-search" projectName="React Image Search"
                     shortDesc="A simple image search webapp written in ReactJS utilizing the Unsplash API."
                     projectLink="https://pics-unsplash.vercel.app/" projectImg="/assets/img_search.png" />
