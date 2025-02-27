@@ -225,6 +225,12 @@
   flex-basis: 100%;
 }
 
+@media screen and (max-width: 450px) {
+  .sm-flex_col {
+    flex-direction: column !important;
+  }
+}
+
 .off_canvas-x {
   transform: translateX(100%);
 }

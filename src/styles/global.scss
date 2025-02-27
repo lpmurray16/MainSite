@@ -199,6 +199,11 @@
         flex-basis: 100%;
     }
 }
+.sm-flex_col {
+    @media screen and (max-width: 450px) {
+        flex-direction: column !important;
+    }
+}
 // specific to transformations and animations
 .off_canvas-x {
     transform: translateX(100%);
